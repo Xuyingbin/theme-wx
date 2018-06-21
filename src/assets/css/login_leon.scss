@@ -1,0 +1,156 @@
+@charset "utf-8";
+@function s($px){
+    @return($px/75)*1rem;
+}
+// 登录
+.login-btn-pr{
+    z-index: 9999;
+}
+.change-box{
+    margin-top: 0;
+}
+.login-tit{
+    font-size: s($px:60);
+    text-indent: s($px:10);
+    padding-bottom: s($px:40);
+}
+.login {
+    .change-input input{
+        text-indent: 0;
+    }
+    p{
+        text-align: right;
+        padding-top: s($px:40);
+        a{
+            font-size: s($px:28);
+            color: #d0bc89;
+        }
+    }
+    .signout{
+        margin-top: s($px:160);
+    }
+    .signout-wechat{
+        margin-top: s($px:30);
+        background-color: transparent;
+        border: s($px:2) solid #d0bc89;
+        color: #d0bc89;
+        box-shadow: 0 s($px:0) s($px:7) rgba($color: #d3bc89, $alpha: .6);
+    }
+    .register-btn{
+        margin: s($px:30) auto;
+        font-size: s($px:32);
+        color: #67a6e6;
+    }
+    // .sigin-box{
+    //     padding-top: s($px:100);
+    // }
+}
+.login-box{
+    background-color: #fff;
+    z-index: 0;
+    .return-btn:before{
+        width: s($px:40);
+        height: s($px:40);
+        background: url(../image/login_close_leon.png) no-repeat center;
+        background-size: s($px:40);
+    }
+}
+.protocol{
+    position: absolute;
+    width: s($px:350);
+    bottom: s($px:-100);
+    left: 50%;
+    margin-left: s($px:-175);
+    font-size: s($px:24);
+    color: #999;
+    a{
+        color: #67a6e6;
+    }
+}
+.login-on{
+    .login-tit{
+        padding-bottom: s($px:20);
+    }
+    .sigin-box{
+        padding-top: 0;
+    }
+    .signout{
+        margin-top: s($px:120);
+    }
+    .signout-wechat{
+        margin-top: s($px:30);
+    }
+}
+
+// 注册
+.reg-top{
+    margin-top: s($px:60);
+}
+.reg-box{
+    h2{
+        font-size: s($px:60);
+    }
+    p{
+        font-size: s($px:24);
+        color: #999;
+        margin-top: s($px:10);
+        a{
+            color: #56c1f9;
+        }
+    }
+    .eight{
+        text-indent: s($px:30);
+        height: s($px:100);
+        line-height: s($px:110);
+    }
+    .phone input{
+        text-indent: s($px:20);
+    }
+    .code button{
+        color: #e80618;
+    }
+    .change-btn{
+        margin-top: s($px:120)
+    }
+    .change-btn-no{
+        border-color: #dedede;
+        color: #dedede;
+    }
+}
+
+// 实名认证
+.check-box-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    a{
+        position: absolute;
+        bottom: s($px:290);
+        left: 50%;
+        margin-left: s($px:-170);
+        width: s($px:340);
+        height: s($px:88);
+        line-height: s($px:88);
+        color: #fff;
+        background-color: #d3bc89;
+        border-radius: s($px:44);
+        font-size: s($px:32);
+        text-align: center;
+        font-family: 'pinfangBold';
+        box-shadow: 0 s($px:4) s($px:17) rgba($color: #6e6756, $alpha: .6);
+    }
+}
+.check-box-bg::before{
+    content: "";
+    position: absolute;
+    width: s($px:330);
+    height: s($px:498);
+    left: 50%;
+    margin-left: s($px:-165);
+    top: s($px:300);
+    background: url(../image/check_pic.png) no-repeat center;
+    background-size: 100%;
+}

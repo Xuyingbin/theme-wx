@@ -1,0 +1,215 @@
+@charset "UTF-8";
+@function s($px){
+  @return($px/75)*1rem;
+}
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+	margin: 0;
+	
+	padding: 0;
+	resize:none
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: 400
+}
+
+address,cite,dfn,em,i,var,b{
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,ul {
+	list-style: none
+}
+
+a,i,input,button,u {
+	text-decoration: none;
+	outline: 0;
+}
+input{
+  caret-color:red;
+}
+input::-webkit-input-placeholder {
+	color: #666
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #dedede
+}
+
+a:hover {
+	text-decoration: none
+}
+
+img { 
+	border: 0;
+	width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+input{
+	width: 100%;
+	-webkit-appearance: none;
+	-webkit-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	padding: 0;
+}
+body,html {
+	// height: 100%;
+	// overflow-y: auto;
+	font-size: 9pt;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-family: pinfangMedium;
+	color: #333;
+	background-color: #fff;
+}
+.tc{
+  text-align: center
+}
+
+/* 中等 */
+@font-face {
+  font-family: 'pinfangMedium';
+  src: url("../fonts/PingFangMedium.ttf");
+}
+
+/* 粗体 */
+@font-face {
+  font-family: 'pinfangBold';
+  src: url("../fonts/PingFangBold.ttf");
+}
+
+/* 常规 */
+@font-face {
+  font-family: 'pinfangRegular';
+  src: url("../fonts/PingFangRegular.ttf");
+}
+
+.webkit {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-sizing: border-box;
+}
+
+.webkit > span {
+  -webkit-box-flex: 1;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+.por {
+  position: relative;
+}
+.hot {
+  color: #e80618 !important;
+}
+
+.hot h4, .hot p, .hot span, .hot u {
+  color: #e80618 !important;
+}
+
+.hot-bj {
+  background-color: #e80618 !important;
+}
+// 弹窗
+.commonAlertBox {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($color: #000,$alpha: 0);
+	z-index: 999;
+}
+
+.alertContent {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: s($px:-190);
+	padding: s($px:36) s($px:30);
+	width: s($px:340);
+	border-radius: s($px:20);
+	background-color: rgba($color: #000,$alpha: .8);
+	color: #fff;
+	text-align: center;
+	font-size: s($px:32);
+	text-indent: 0;
+}
+
+.signout{
+	font-size: s($px:32);
+	color: #fff;
+	width: s($px:400);
+	height: s($px:88);
+	line-height: s($px:88);
+	border-radius: s($px:44);
+	background-color: #d0ba89;
+	display: block;
+	margin: s($px:660) auto s($px:15);
+	box-shadow: 0 s($px:10) s($px:15) rgba($color: #d3bc89, $alpha: .8);
+}
+.loading-background{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 9;
+}
+.loading{
+	width: s($px:200);
+	height: s($px:160);
+	background: url(../image/loading.gif) no-repeat center;
+	background-size: s($px:160);
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: s($px:-100);
+	border-radius: s($px:20);
+	// box-shadow: 0 1px 10px rgba($color: #333, $alpha: .8);
+	z-index: 999
+}
+
+// 顶部状态栏
+.barTopStu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: s($px:35);
+	background-color: #d0ba89;
+	z-index: 99;
+	opacity: 0;
+	transition: opacity 2s;
+}
+// 没有数据
+.nomover{
+	display: none;
+}
+.nolist{
+	margin: s($px:30) auto;
+	text-align: center;
+	font-size: s($px:32);
+	color: #d0bc89
+}
+.noDataBj{
+	width: s($px:130);
+	height: s($px:140);
+	background: url(../image/noData.png) no-repeat center;
+	background-size: s($px:130);
+	margin: 50% auto;
+}
+
